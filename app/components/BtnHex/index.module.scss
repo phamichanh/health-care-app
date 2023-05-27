@@ -1,0 +1,31 @@
+.btn-hex {
+  width: 116px;
+  height: 134px;
+  background: linear-gradient(
+    90deg,
+    theme("colors.primary.DEFAULT"),
+    theme("colors.primary.400")
+  );
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.btn-hex__icon {
+  height: 45px;
+  width: 53px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-hex__icon-knife {
+  background-image: url("~/public/img/icons/knife.svg");
+}
+
+.btn-hex__icon-cup {
+  background-image: url("~/public/img/icons/cup.svg");
+}
+
+.btn-hex__label {
+  color: white;
+  font-size: 20px;
+  line-height: 24px;
+}
