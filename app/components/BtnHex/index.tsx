@@ -2,11 +2,7 @@ import styles from "./index.module.scss";
 
 type BtnIcon = "knife" | "cup";
 
-function HexagonalButton(props: {
-  label?: string;
-  icon?: BtnIcon;
-  href?: string;
-}) {
+function BtnHex(props: { label?: string; icon?: BtnIcon; href?: string }) {
   const { label = "Button", icon = "knife", href = "#" } = props;
   const classIcon = styles[`btn-hex__icon-${icon}`];
   return (
@@ -20,4 +16,4 @@ function HexagonalButton(props: {
   );
 }
 
-export default HexagonalButton;
+export default BtnHex;
