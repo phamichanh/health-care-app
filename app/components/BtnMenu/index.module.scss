@@ -1,0 +1,27 @@
+.btn-menu {
+  color: white;
+  font-size: 16px;
+}
+
+.btn-menu__icon {
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.btn-menu__icon-memo {
+  background-image: url("~/public/img/icons/memo.svg");
+}
+
+.btn-menu__icon-challenge {
+  background-image: url("~/public/img/icons/challenge.svg");
+}
+
+.btn-menu__icon-info {
+  background-image: url("~/public/img/icons/info.svg");
+}
+
+.btn-menu__label {
+  font-size: 16px;
+}
