@@ -6,7 +6,7 @@ import BtnMenu from "../BtnMenu";
 function Header() {
   return (
     <nav className="bg-dark-500 fixed w-full z-20 top-0 left-0 shadow-md">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-40">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-5 sm:px-20 md:px-40">
         <Link href="/" className="flex items-center pt-2">
           <Image
             src="img/logo.svg"
@@ -16,10 +16,7 @@ function Header() {
             priority
           />
         </Link>
-        <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto"
-          id="navbar-sticky"
-        >
+        <div className="items-center justify-between hidden w-full md:flex md:w-auto">
           <ul className="flex space-x-2 mr-5">
             <li className="w-40">
               <BtnMenu label="自分の記録" icon="memo" href="/my-record" />
