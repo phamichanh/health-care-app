@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const notoSansJp = Noto_Sans_JP({
-  weight: ["400", "500", "700"],
   subsets: ["latin"],
   variable: "--font-noto-sans-jp",
   display: "swap",
