@@ -1,0 +1,18 @@
+.meal {
+  width: 234px;
+  height: 234px;
+  position: relative;
+}
+
+.meal__time {
+  color: white;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 7px 10px;
+  min-width: 120px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: theme("colors.primary.DEFAULT");
+}
