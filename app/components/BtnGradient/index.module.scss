@@ -1,0 +1,11 @@
+.btn-gradient {
+  width: 296px;
+  background: linear-gradient(
+    0deg,
+    theme("colors.primary.DEFAULT"),
+    theme("colors.primary.400")
+  );
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+}
