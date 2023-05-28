@@ -1,0 +1,30 @@
+.diary {
+  box-sizing: border-box;
+  width: 231px;
+  height: 231px;
+  border: 2px solid #707070;
+}
+
+.meal__time {
+  color: white;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 7px 10px;
+  min-width: 120px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: theme("colors.primary.DEFAULT");
+}
+
+.diary__date,
+.diary__time {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.diary__text {
+  font-size: 12px;
+  white-space: pre-wrap;
+}
