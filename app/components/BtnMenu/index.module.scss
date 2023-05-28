@@ -8,6 +8,7 @@
   width: 32px;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
 
 .btn-menu__icon-memo {
@@ -24,4 +25,20 @@
 
 .btn-menu__label {
   font-size: 16px;
+}
+
+.btn-menu__info-count {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: theme("colors.primary.500");
+  color: white;
+  font-size: 10px;
+  line-height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -8px;
+  top: 0;
 }

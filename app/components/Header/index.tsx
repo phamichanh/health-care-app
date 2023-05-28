@@ -17,7 +17,7 @@ function Header() {
             priority
           />
         </Link>
-        <div className="items-center justify-between hidden w-full md:flex md:w-auto">
+        <div className="items-center justify-between w-full flex md:w-auto">
           <ul className="flex space-x-2 mr-5">
             <li className="w-40">
               <BtnMenu label="自分の記録" icon="memo" href="/my-record" />
@@ -26,7 +26,7 @@ function Header() {
               <BtnMenu label="チャレンジ" icon="challenge" />
             </li>
             <li className="w-40">
-              <BtnMenu label="お知らせ" icon="info" />
+              <BtnMenu label="お知らせ" icon="info" infoCount={1} />
             </li>
           </ul>
           <HamburgerMenu />
