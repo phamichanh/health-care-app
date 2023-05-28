@@ -1,0 +1,24 @@
+.recommend {
+  width: 288px;
+  height: 288px;
+  border: 24px solid theme("colors.primary.DEFAULT");
+  box-sizing: border-box;
+  position: relative;
+
+  img {
+    opacity: 0.25;
+  }
+}
+
+.recommend__content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recommend__content--mask {
+  background-color: theme("colors.dark.DEFAULT");
+  mix-blend-mode: luminosity;
+}
