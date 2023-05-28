@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import BtnMenu from "../BtnMenu";
+import HamburgerMenu from "../HamburgerMenu";
 
 function Header() {
   return (
@@ -28,12 +29,7 @@ function Header() {
               <BtnMenu label="お知らせ" icon="info" />
             </li>
           </ul>
-          <Image
-            src="img/icons/hamburger.svg"
-            width="32"
-            height="32"
-            alt="Menu"
-          />
+          <HamburgerMenu />
         </div>
       </div>
     </nav>
