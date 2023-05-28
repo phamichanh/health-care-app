@@ -16,7 +16,7 @@ function ColumnItem(props: {
     tags = ["魚料理", "和食", "DHA"],
   } = props;
   return (
-    <div className={styles["col-item"]}>
+    <div className={`${styles["col-item"]} my-1`}>
       <div className={styles["col-item__thumb"]}>
         <Image src={src} alt={alt} className="object-cover" fill />
         <p className={`${styles["col-item__time"]} flex justify-between`}>
