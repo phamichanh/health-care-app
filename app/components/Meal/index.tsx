@@ -8,7 +8,7 @@ function Meal(props: { time?: string; src?: string; alt?: string }) {
     alt = "sandwiches",
   } = props;
   return (
-    <div className={styles.meal}>
+    <div className={`${styles.meal} my-1`}>
       <Image src={src} alt={alt} className="object-cover" fill />
       <p className={styles.meal__time}>{time}</p>
     </div>
