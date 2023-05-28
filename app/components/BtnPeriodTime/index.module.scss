@@ -1,0 +1,37 @@
+.button {
+  float: left;
+  width: 56px;
+  height: 24px;
+  position: relative;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.button label,
+.button input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.button input[type="radio"] {
+  opacity: 0.011;
+  z-index: 2;
+}
+
+.button input[type="radio"]:checked + label {
+  background: theme("colors.primary.DEFAULT");
+  color: white;
+}
+
+.button label {
+  z-index: 1;
+  border-radius: 12px;
+  background-color: white;
+  color: theme("colors.primary.DEFAULT");
+}

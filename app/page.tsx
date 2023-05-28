@@ -34,7 +34,9 @@ export default async function Home() {
     <main className="flex min-h-screen flex-col items-center my-16">
       <section className={`${styles.result} flex w-full`}>
         <ProgressRate date={progress.date} progress={progress.value} />
-        <BodyGraph />
+        <div className="bg-dark grow py-3 px-10">
+          <BodyGraph />
+        </div>
       </section>
       <section className="section">
         <div className="flex justify-between px-32 mt-6">

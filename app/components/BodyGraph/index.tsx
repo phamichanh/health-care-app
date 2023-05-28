@@ -97,11 +97,7 @@ function BodyGraph(props: {
     ],
   };
 
-  return (
-    <div className="bg-dark grow py-3 px-16">
-      <Line data={data} width={width} height={height} options={options} />
-    </div>
-  );
+  return <Line data={data} width={width} height={height} options={options} />;
 }
 
 export default BodyGraph;

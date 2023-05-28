@@ -4,6 +4,7 @@ import BodyGraph from "../components/BodyGraph";
 import Diary from "../components/Diary";
 import BtnGradient from "../components/BtnGradient";
 import Exercise from "../components/Exercise";
+import BtnPeriodTime from "../components/BtnPeriodTime";
 
 export default function MyRecord() {
   return (
@@ -23,8 +24,24 @@ export default function MyRecord() {
           alt="using phone"
         />
       </section>
-      <section className={`${styles["body-record"]} section`}>
-        <BodyGraph width={960} height={210} />
+      <section className={`${styles["body-record"]} section py-4 px-6`}>
+        <div className="flex mb-1">
+          <p className={`${styles["my-exercise__title"]} text-light`}>
+            MY RECORD
+          </p>
+          <p className={`${styles["my-exercise__date"]} text-light`}>
+            2021.05.21
+          </p>
+        </div>
+        <div className="px-5 mb-2">
+          <BodyGraph width={960} height={210} />
+        </div>
+        <div>
+          <BtnPeriodTime id="day-filter" label="日" />
+          <BtnPeriodTime id="week-filter" label="週" />
+          <BtnPeriodTime id="month-filter" label="月" />
+          <BtnPeriodTime id="year-filter" label="年" />
+        </div>
       </section>
       <section className={`${styles["my-exercise"]} section py-4 px-6`}>
         <div className="flex">
