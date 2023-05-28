@@ -2,6 +2,7 @@ import "./globals.css";
 import { Noto_Sans_JP } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BtnToTop from "./components/BtnToTop";
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={notoSansJp.className}>
         <Header />
         {children}
+        <BtnToTop />
         <Footer />
       </body>
     </html>
