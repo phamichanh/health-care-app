@@ -1,0 +1,42 @@
+[
+  {
+    "time": "05.21.Morning",
+    "src": "/img/meals/m01.jpg",
+    "alt": "Sandwiches"
+  },
+  {
+    "time": "05.21.Lunch",
+    "src": "/img/meals/l03.jpg",
+    "alt": "Lunch Box"
+  },
+  {
+    "time": "05.21.Dinner",
+    "src": "/img/meals/d01.jpg",
+    "alt": "Set meal"
+  },
+  {
+    "time": "05.21.Snack",
+    "src": "/img/meals/l01.jpg",
+    "alt": "Ramen"
+  },
+  {
+    "time": "05.20.Morning",
+    "src": "/img/meals/m02.jpg",
+    "alt": "Sandwiches"
+  },
+  {
+    "time": "05.20.Lunch",
+    "src": "/img/meals/l02.jpg",
+    "alt": "Hotdog"
+  },
+  {
+    "time": "05.20.Dinner",
+    "src": "/img/meals/d02.jpg",
+    "alt": "Set meal"
+  },
+  {
+    "time": "05.20.Snack",
+    "src": "/img/meals/s01.jpg",
+    "alt": "Ice cream"
+  }
+]
