@@ -2,6 +2,7 @@ import styles from "./my-record.module.scss";
 import Recommend from "../components/Recommend";
 import BodyGraph from "../components/BodyGraph";
 import Diary from "../components/Diary";
+import BtnGradient from "../components/BtnGradient";
 
 export default function MyRecord() {
   return (
@@ -25,7 +26,7 @@ export default function MyRecord() {
         <BodyGraph width={960} height={210} />
       </section>
       <section className={`${styles["my-exercise"]} section`}></section>
-      <section className={`${styles["my-diary"]} section`}>
+      <section className={`${styles["my-diary"]} section mb-7`}>
         <p className={`${styles["my-diary__title"]}`}>MY DIARY</p>
         <div className="flex flex-wrap justify-between">
           {(() => {
@@ -37,6 +38,7 @@ export default function MyRecord() {
           })()}
         </div>
       </section>
+      <BtnGradient label="自分の日記をもっと見る" />
     </main>
   );
 }
