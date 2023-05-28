@@ -3,6 +3,7 @@ import Recommend from "../components/Recommend";
 import BodyGraph from "../components/BodyGraph";
 import Diary from "../components/Diary";
 import BtnGradient from "../components/BtnGradient";
+import Exercise from "../components/Exercise";
 
 export default function MyRecord() {
   return (
@@ -25,7 +26,36 @@ export default function MyRecord() {
       <section className={`${styles["body-record"]} section`}>
         <BodyGraph width={960} height={210} />
       </section>
-      <section className={`${styles["my-exercise"]} section`}></section>
+      <section className={`${styles["my-exercise"]} section py-4 px-6`}>
+        <div className="flex">
+          <p className={`${styles["my-exercise__title"]} text-light`}>
+            MY EXERCISE
+          </p>
+          <p className={`${styles["my-exercise__date"]} text-light`}>
+            2021.05.21
+          </p>
+        </div>
+        <div className="overflow-y-scroll h-48 flex justify-between">
+          <div>
+            {(() => {
+              const elements = [];
+              for (let i = 0; i < 8; i++) {
+                elements.push(<Exercise />);
+              }
+              return elements;
+            })()}
+          </div>
+          <div>
+            {(() => {
+              const elements = [];
+              for (let i = 0; i < 8; i++) {
+                elements.push(<Exercise />);
+              }
+              return elements;
+            })()}
+          </div>
+        </div>
+      </section>
       <section className={`${styles["my-diary"]} section mb-7`}>
         <p className={`${styles["my-diary__title"]}`}>MY DIARY</p>
         <div className="flex flex-wrap justify-between">
