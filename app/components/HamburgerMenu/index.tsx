@@ -3,11 +3,10 @@ import styles from "./index.module.scss";
 
 function HamburgerMenu() {
   const toggleMenu = () => {
-    console.log("click");
-    const toggleMenu = document.getElementById("myDropdown");
+    const listMenu = document.getElementById("myDropdown");
     const dropBtn = document.getElementById("myDropBtn");
-    if (toggleMenu) {
-      toggleMenu.classList.toggle(styles.show);
+    if (listMenu) {
+      listMenu.classList.toggle(styles.show);
     }
     if (dropBtn) {
       dropBtn.classList.toggle(styles["drop-btn--close"]);
