@@ -7,7 +7,7 @@ import BtnGradient from "../components/BtnGradient";
 export default function MyRecord() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <section className="section flex justify-between">
+      <section className="section flex justify-between mt-5">
         <Recommend />
         <Recommend
           title="my exercise"
