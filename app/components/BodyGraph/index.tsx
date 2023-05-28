@@ -30,6 +30,8 @@ function BodyGraph(props: {
   months?: string[];
   data1?: number[];
   data2?: number[];
+  width?: number;
+  height?: number;
 }) {
   const {
     months = [
@@ -48,6 +50,8 @@ function BodyGraph(props: {
     ],
     data1 = [1, 0.95, 0.7, 0.8, 0.75, 0.7, 0.8, 0.7, 0.55, 0.5, 0.45, 0.5],
     data2 = [1, 0.9, 0.75, 0.7, 0.65, 0.65, 0.5, 0.45, 0.4, 0.3, 0.25, 0.15],
+    width = 700,
+    height = 316,
   } = props;
 
   const options = {
@@ -94,8 +98,8 @@ function BodyGraph(props: {
   };
 
   return (
-    <div className={`${styles["body-graph"]} bg-dark grow py-3 px-16`}>
-      <Line data={data} width={700} height={316} options={options} />
+    <div className="bg-dark grow py-3 px-16">
+      <Line data={data} width={width} height={height} options={options} />
     </div>
   );
 }

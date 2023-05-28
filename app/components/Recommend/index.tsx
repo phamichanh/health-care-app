@@ -11,7 +11,7 @@ function Recommend(props: {
   const {
     title = "body record",
     btnLabel = "自分のカラダの記録",
-    src = "/img/MyRecommend-1.jpg",
+    src = "/img/recommends/MyRecommend-1.jpg",
     alt = "body",
   } = props;
   return (

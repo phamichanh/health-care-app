@@ -36,7 +36,7 @@ export default async function Home() {
         <ProgressRate date={progress.date} progress={progress.value} />
         <BodyGraph />
       </section>
-      <section className={`${styles.section}`}>
+      <section className="section">
         <div className="flex justify-between px-32 mt-6">
           <BtnHex label="Morning" />
           <BtnHex label="Lunch" />
