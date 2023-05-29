@@ -45,7 +45,7 @@ export default async function Home() {
           <BtnHex label="Dinner" />
           <BtnHex label="Snack" icon="cup" />
         </div>
-        <div className="flex flex-wrap justify-between mt-5">
+        <div className={`${styles["meals-container"]} overflow-hidden flex flex-wrap justify-between mt-5`}>
           {meals.map(
             (
               meal: { time?: string; src?: string; alt?: string },
