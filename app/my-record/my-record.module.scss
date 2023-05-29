@@ -29,3 +29,8 @@
 .my-exercise__date {
   font-size: 22px;
 }
+
+.my-diary__container {
+  max-height: 494px;
+  transition: all 1s ease-in-out;
+}

@@ -6,7 +6,20 @@ import BtnGradient from "../components/BtnGradient";
 import Exercise from "../components/Exercise";
 import BtnPeriodTime from "../components/BtnPeriodTime";
 
-export default function MyRecord() {
+async function getDiaries() {
+  const res = await fetch("http://localhost:6767/api/diaries", {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("failed to fetch diaries");
+  }
+
+  return res.json();
+}
+
+export default async function MyRecord() {
+  const diaries = await getDiaries();
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <section className="section flex justify-between mt-5">
@@ -75,17 +88,18 @@ export default function MyRecord() {
       </section>
       <section className={`${styles["my-diary"]} section mb-7`}>
         <p className={`${styles["my-diary__title"]}`}>MY DIARY</p>
-        <div className="flex flex-wrap justify-between">
-          {(() => {
-            const elements = [];
-            for (let i = 0; i < 8; i++) {
-              elements.push(<Diary />);
-            }
-            return elements;
-          })()}
+        <div id="diaries-container" className={`${styles["my-diary__container"]} flex flex-wrap justify-between overflow-hidden`}>
+          {diaries.map(
+            (
+              diary: { date?: string; time?: string; text?: string },
+              idx: number
+            ) => (
+              <Diary key={idx} date={diary.date} time={diary.time} text={diary.text} />
+            )
+          )}
         </div>
       </section>
-      <BtnGradient label="自分の日記をもっと見る" />
+      <BtnGradient label="自分の日記をもっと見る" targetId="diaries-container" />
     </main>
   );
 }

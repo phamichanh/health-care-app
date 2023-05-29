@@ -38,5 +38,45 @@
     "time": "05.20.Snack",
     "src": "/img/meals/s01.jpg",
     "alt": "Ice cream"
+  },
+  {
+    "time": "05.19.Morning",
+    "src": "/img/meals/m01.jpg",
+    "alt": "Sandwiches"
+  },
+  {
+    "time": "05.19.Lunch",
+    "src": "/img/meals/l03.jpg",
+    "alt": "Lunch Box"
+  },
+  {
+    "time": "05.19.Dinner",
+    "src": "/img/meals/d01.jpg",
+    "alt": "Set meal"
+  },
+  {
+    "time": "05.19.Snack",
+    "src": "/img/meals/l01.jpg",
+    "alt": "Ramen"
+  },
+  {
+    "time": "05.18.Morning",
+    "src": "/img/meals/m02.jpg",
+    "alt": "Sandwiches"
+  },
+  {
+    "time": "05.18.Lunch",
+    "src": "/img/meals/l02.jpg",
+    "alt": "Hotdog"
+  },
+  {
+    "time": "05.18.Dinner",
+    "src": "/img/meals/d02.jpg",
+    "alt": "Set meal"
+  },
+  {
+    "time": "05.18.Snack",
+    "src": "/img/meals/s01.jpg",
+    "alt": "Ice cream"
   }
 ]
