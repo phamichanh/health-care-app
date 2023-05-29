@@ -11,18 +11,21 @@ async function getMeals() {
       cache: "no-store",
     });
     return res.json();
-  } catch(e) {
+  } catch (e) {
     return [
-      { "time": "05.21.Morning", "src": "/img/meals/m01.jpg", "alt": "Sandwiches" },
-      { "time": "05.21.Lunch", "src": "/img/meals/l03.jpg", "alt": "Lunch Box" },
-      { "time": "05.21.Dinner", "src": "/img/meals/d01.jpg", "alt": "Set meal" },
-      { "time": "05.21.Snack", "src": "/img/meals/l01.jpg", "alt": "Ramen" },
-      { "time": "05.20.Morning", "src": "/img/meals/m02.jpg", "alt": "Sandwiches" },
-      { "time": "05.20.Lunch", "src": "/img/meals/l02.jpg", "alt": "Hotdog" },
-      { "time": "05.20.Dinner", "src": "/img/meals/d02.jpg", "alt": "Set meal" },
-      { "time": "05.20.Snack", "src": "/img/meals/s01.jpg", "alt": "Ice cream" }
-    ]
-    ;
+      { time: "05.21.Morning", src: "/img/meals/m01.jpg", alt: "Sandwiches" },
+      { time: "05.21.Lunch", src: "/img/meals/l03.jpg", alt: "Lunch Box" },
+      { time: "05.21.Dinner", src: "/img/meals/d01.jpg", alt: "Set meal" },
+      { time: "05.21.Snack", src: "/img/meals/l01.jpg", alt: "Ramen" },
+      { time: "05.20.Morning", src: "/img/meals/m02.jpg", alt: "Sandwiches" },
+      { time: "05.20.Lunch", src: "/img/meals/l02.jpg", alt: "Hotdog" },
+      { time: "05.20.Dinner", src: "/img/meals/d02.jpg", alt: "Set meal" },
+      { time: "05.20.Snack", src: "/img/meals/s01.jpg", alt: "Ice cream" },
+      { time: "05.19.Morning", src: "/img/meals/m01.jpg", alt: "Sandwiches" },
+      { time: "05.19.Lunch", src: "/img/meals/l03.jpg", alt: "Lunch Box" },
+      { time: "05.19.Dinner", src: "/img/meals/d01.jpg", alt: "Set meal" },
+      { time: "05.19.Snack", src: "/img/meals/l01.jpg", alt: "Ramen" },
+    ];
   }
 }
 
@@ -32,10 +35,10 @@ async function getProgress() {
       cache: "no-store",
     });
     return res.json();
-  } catch(e) {
+  } catch (e) {
     return {
-      "date": "05/21",
-      "value": 75
+      date: "05/21",
+      value: 75,
     };
   }
 }
@@ -46,11 +49,24 @@ async function getBodyData() {
       cache: "no-store",
     });
     return res.json();
-  } catch(e) {
+  } catch (e) {
     return {
-      "months": ["6月", "7月", "8月", "9月", "10月", "11月", "12月", "1月", "2月", "3月", "4月","5月"],
-      "data1": [1, 0.95, 0.7, 0.8, 0.75, 0.7, 0.8, 0.7, 0.55, 0.5, 0.45, 0.5],
-      "data2": [1, 0.9, 0.75, 0.7, 0.65, 0.65, 0.5, 0.45, 0.4, 0.3, 0.25, 0.15]
+      months: [
+        "6月",
+        "7月",
+        "8月",
+        "9月",
+        "10月",
+        "11月",
+        "12月",
+        "1月",
+        "2月",
+        "3月",
+        "4月",
+        "5月",
+      ],
+      data1: [1, 0.95, 0.7, 0.8, 0.75, 0.7, 0.8, 0.7, 0.55, 0.5, 0.45, 0.5],
+      data2: [1, 0.9, 0.75, 0.7, 0.65, 0.65, 0.5, 0.45, 0.4, 0.3, 0.25, 0.15],
     };
   }
 }
@@ -64,7 +80,11 @@ export default async function Home() {
       <section className={`${styles.result} flex w-full`}>
         <ProgressRate date={progress.date} progress={progress.value} />
         <div className="bg-dark grow py-3 px-10">
-          <BodyGraph months={bodyData.months} data1={bodyData.data1} data2={bodyData.data2} />
+          <BodyGraph
+            months={bodyData.months}
+            data1={bodyData.data1}
+            data2={bodyData.data2}
+          />
         </div>
       </section>
       <section className="section mt-6 mb-7">
@@ -74,7 +94,10 @@ export default async function Home() {
           <BtnHex label="Dinner" />
           <BtnHex label="Snack" icon="cup" />
         </div>
-        <div id="meals-container" className={`${styles["meals-container"]} overflow-hidden flex flex-wrap justify-between mt-5`}>
+        <div
+          id="meals-container"
+          className={`${styles["meals-container"]} overflow-hidden flex flex-wrap justify-between mt-5`}
+        >
           {meals.map(
             (
               meal: { time?: string; src?: string; alt?: string },
