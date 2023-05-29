@@ -6,25 +6,38 @@ import BtnHex from "./components/BtnHex";
 import Meal from "./components/Meal";
 
 async function getMeals() {
-  const res = await fetch("http://localhost:6767/api/meals", {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("failed to fetch meals");
+  try {
+    const res = await fetch("http://localhost:6767/api/meals", {
+      cache: "no-store",
+    });
+    return res.json();
+  } catch(e) {
+    return [
+      { "time": "05.21.Morning", "src": "/img/meals/m01.jpg", "alt": "Sandwiches" },
+      { "time": "05.21.Lunch", "src": "/img/meals/l03.jpg", "alt": "Lunch Box" },
+      { "time": "05.21.Dinner", "src": "/img/meals/d01.jpg", "alt": "Set meal" },
+      { "time": "05.21.Snack", "src": "/img/meals/l01.jpg", "alt": "Ramen" },
+      { "time": "05.20.Morning", "src": "/img/meals/m02.jpg", "alt": "Sandwiches" },
+      { "time": "05.20.Lunch", "src": "/img/meals/l02.jpg", "alt": "Hotdog" },
+      { "time": "05.20.Dinner", "src": "/img/meals/d02.jpg", "alt": "Set meal" },
+      { "time": "05.20.Snack", "src": "/img/meals/s01.jpg", "alt": "Ice cream" }
+    ]
+    ;
   }
-
-  return res.json();
 }
 
 async function getProgress() {
-  const res = await fetch("http://localhost:6767/api/progress", {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("failed to fetch progress");
+  try {
+    const res = await fetch("http://localhost:6767/api/progress", {
+      cache: "no-store",
+    });
+    return res.json();
+  } catch(e) {
+    return {
+      "date": "05/21",
+      "value": 75
+    };
   }
-
-  return res.json();
 }
 
 export default async function Home() {
