@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 
 function ColumnItem(props: {
-  time?: string;
+  time?: string[];
   src?: string;
   alt?: string;
   title?: string;
