@@ -23,10 +23,13 @@
 
 **1. フレームワーク・ライブラリ**
 
-- [Next.js](https://nextjs.org/)
-- [React.js](https://react.dev/)
-- [tailwindcss](https://tailwindcss.com/)
-- [Chart.js](https://www.chartjs.org/)
+- フレームワーク
+  - [Next.js](https://nextjs.org/)
+  - [React.js](https://react.dev/)
+- スタイルライブラリ
+  - [tailwindcss](https://tailwindcss.com/)
+- グラフを描くライブラリ
+  - [Chart.js](https://www.chartjs.org/)
 
 **2. モック API**
 
@@ -295,3 +298,19 @@ _※ 全配列の要素数は同じで作ってください。要素数をマッ
   { "time": ["2021.05.06", "18:25"], "src": "/img/columns/column-8.jpg", "alt": "beautiful woman" }
 ]
 ```
+
+## サマリー
+
+これは私が ReactJS フレームワークを使用してウェブページを作成するのは初めての経験です。ReactJS は学びやすくアクセスしやすいフレームワークであると感じました。
+
+ReactJS と Next.js の基本的な概念を理解するために約 4 時間を費やし、その後コーディングを開始しました。要件に従ってウェブページを完成させるのに約 13 時間、そして README ファイルを作成するのにさらに 3 時間かかりました。テストを完了するまでの総時間は 16 時間です。
+
+このテストを通じて新たな知識を学ぶことができ、自分自身が成長したと感じています。
+
+| 詳細         | 時間 |
+| ------------ | ---- |
+| ReactJS 勉強 | 4    |
+| コーディング | 13   |
+| README 作成  | 3    |
+| ------------ | ---- |
+| 合計         | 20   |
