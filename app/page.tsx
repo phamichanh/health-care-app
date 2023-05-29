@@ -40,15 +40,31 @@ async function getProgress() {
   }
 }
 
+async function getBodyData() {
+  try {
+    const res = await fetch("http://localhost:6767/api/body", {
+      cache: "no-store",
+    });
+    return res.json();
+  } catch(e) {
+    return {
+      "months": ["6月", "7月", "8月", "9月", "10月", "11月", "12月", "1月", "2月", "3月", "4月","5月"],
+      "data1": [1, 0.95, 0.7, 0.8, 0.75, 0.7, 0.8, 0.7, 0.55, 0.5, 0.45, 0.5],
+      "data2": [1, 0.9, 0.75, 0.7, 0.65, 0.65, 0.5, 0.45, 0.4, 0.3, 0.25, 0.15]
+    };
+  }
+}
+
 export default async function Home() {
   const meals = await getMeals();
   const progress = await getProgress();
+  const bodyData = await getBodyData();
   return (
     <main className="flex min-h-screen flex-col items-center my-16">
       <section className={`${styles.result} flex w-full`}>
         <ProgressRate date={progress.date} progress={progress.value} />
         <div className="bg-dark grow py-3 px-10">
-          <BodyGraph />
+          <BodyGraph months={bodyData.months} data1={bodyData.data1} data2={bodyData.data2} />
         </div>
       </section>
       <section className="section mt-6 mb-7">
