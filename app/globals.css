@@ -24,3 +24,8 @@ body {
 .section {
   width: 960px;
 }
+
+.expand-content {
+  max-height: 9999px !important;
+  transition: all 1s ease-in-out;
+}

@@ -4,5 +4,6 @@
 }
 
 .meals-container {
-  height: 484px;
+  max-height: 484px;
+  transition: all 1s ease-in-out;
 }

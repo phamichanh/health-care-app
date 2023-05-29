@@ -45,7 +45,7 @@ export default async function Home() {
           <BtnHex label="Dinner" />
           <BtnHex label="Snack" icon="cup" />
         </div>
-        <div className={`${styles["meals-container"]} overflow-hidden flex flex-wrap justify-between mt-5`}>
+        <div id="meals-container" className={`${styles["meals-container"]} overflow-hidden flex flex-wrap justify-between mt-5`}>
           {meals.map(
             (
               meal: { time?: string; src?: string; alt?: string },
@@ -56,7 +56,7 @@ export default async function Home() {
           )}
         </div>
       </section>
-      <BtnGradient label="記録をもっと見る" />
+      <BtnGradient label="記録をもっと見る" targetId="meals-container" />
     </main>
   );
 }
