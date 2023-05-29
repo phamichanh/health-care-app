@@ -17,8 +17,24 @@ async function getDiaries() {
   return res.json();
 }
 
+async function getBodyData() {
+  try {
+    const res = await fetch("http://localhost:6767/api/body", {
+      cache: "no-store",
+    });
+    return res.json();
+  } catch(e) {
+    return {
+      "months": ["6月", "7月", "8月", "9月", "10月", "11月", "12月", "1月", "2月", "3月", "4月","5月"],
+      "data1": [1, 0.95, 0.7, 0.8, 0.75, 0.7, 0.8, 0.7, 0.55, 0.5, 0.45, 0.5],
+      "data2": [1, 0.9, 0.75, 0.7, 0.65, 0.65, 0.5, 0.45, 0.4, 0.3, 0.25, 0.15]
+    };
+  }
+}
+
 export default async function MyRecord() {
   const diaries = await getDiaries();
+  const bodyData = await getBodyData();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -47,7 +63,7 @@ export default async function MyRecord() {
           </p>
         </div>
         <div className="px-5 mb-2">
-          <BodyGraph width={960} height={210} />
+          <BodyGraph width={960} height={210} months={bodyData.months} data1={bodyData.data1} data2={bodyData.data2} />
         </div>
         <div>
           <BtnPeriodTime id="day-filter" label="日" />
