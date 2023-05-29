@@ -38,7 +38,7 @@
 
 ## 始め方
 
-#### 前提条件
+### 前提条件
 
 1. [Nodejs](https://nodejs.org/en)ホームページにアクセスしてインストラクターの通りにインストールする
 
@@ -60,7 +60,7 @@ npm install --global yarn
 yarn global add restapify
 ```
 
-#### 健康管理アプリのインストール
+### アプリのインストール
 
 1. リポジトリのクローンを作成する
 
@@ -68,28 +68,47 @@ yarn global add restapify
 git clone https://github.com/phamichanh/health-care-app.git
 ```
 
-2. アプリのディレクトリに遷移する
+2. アプリのディレクトリでパッケージをインストールする
 
 ```sh
 cd /{your-path}/health-care-app
-```
-
-3. アプリのディレクトリでパッケージをインストールする
-
-```sh
 yarn install
 ```
 
-4. 開発サーバーを実行する
+3. モック API サーバーを実行する
+
+_※モック API を起動しないと、デフォルトデータが反映されます。_
 
 ```sh
+cd /{your-path}/health-care-app/mockedApi
+restapify serve .
+```
+
+4. アプリの開発サーバーを実行する
+
+```sh
+cd /{your-path}/health-care-app
 yarn dev
 ```
 
 ブラウザで [http://localhost:3000](http://localhost:3000) を開いて結果を確認します。
 
-cd modkedApi
-restapify serve .
+### マニュアル
 
-● 明瞭さ
-○ README は問題点と解決策、動作確認手順を明確かつ簡潔に説明していますか？
+#### ページ遷移
+
+**1. [トップページ](http://localhost:3000)**
+
+- [http://localhost:3000](http://localhost:3000)にアクセスできる
+- ページで左上にある**Healthy**ロゴをクリックする
+
+**2. [自分の記録](http://localhost:3000/my-record)**
+
+- [http://localhost:3000/my-record](http://localhost:3000/my-record)にアクセスできる
+- ページでヘッダーのにある**自分の記録**リンクをクリックする
+- 右上にある**ハンバーガーボタン**をクリックして、ドロップダウンリストにある**自分の記録**をクリックする
+
+**3. [カラム一覧](http://localhost:3000/column)**
+
+- [http://localhost:3000/column](http://localhost:3000/column)にアクセスできる
+- 右上にある**ハンバーガーボタン**をクリックして、ドロップダウンリストにある**カラム一覧**をクリックする
