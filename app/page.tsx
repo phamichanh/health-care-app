@@ -38,14 +38,14 @@ export default async function Home() {
           <BodyGraph />
         </div>
       </section>
-      <section className="section">
-        <div className="flex justify-between px-32 mt-6">
+      <section className="section mt-6 mb-7">
+        <div className="flex justify-between px-32">
           <BtnHex label="Morning" />
           <BtnHex label="Lunch" />
           <BtnHex label="Dinner" />
           <BtnHex label="Snack" icon="cup" />
         </div>
-        <div className="flex flex-wrap justify-between mt-5 mb-7">
+        <div className="flex flex-wrap justify-between mt-5">
           {meals.map(
             (
               meal: { time?: string; src?: string; alt?: string },
