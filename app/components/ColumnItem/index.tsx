@@ -18,7 +18,7 @@ function ColumnItem(props: {
   return (
     <div className={`${styles["col-item"]} my-1`}>
       <div className={styles["col-item__thumb"]}>
-        <Image src={src} alt={alt} className="object-cover" fill />
+        <Image src={src} alt={alt} className="object-cover" sizes="(max-width: 640px) 100vw, 50vw, 33vw" fill />
         <p className={`${styles["col-item__time"]} flex justify-between`}>
           <span>{time[0]}</span>
           <span>{time[1]}</span>

@@ -23,6 +23,7 @@ function Recommend(props: {
           src={src}
           alt={alt}
           className="object-cover mix-blend-luminosity"
+          sizes="(max-width: 640px) 100vw, 50vw, 33vw"
           fill
         />
       </div>

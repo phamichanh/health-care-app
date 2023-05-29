@@ -18,6 +18,7 @@ function ProgressRate(props: {
         src="/img/meals/d01.jpg"
         alt="Set meal"
         className="object-cover"
+        sizes="(max-width: 640px) 100vw, 50vw, 33vw"
         fill
       />
       <div

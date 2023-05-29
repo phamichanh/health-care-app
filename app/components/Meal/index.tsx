@@ -9,7 +9,7 @@ function Meal(props: { time?: string; src?: string; alt?: string }) {
   } = props;
   return (
     <div className={`${styles.meal} my-1`}>
-      <Image src={src} alt={alt} className="object-cover" fill />
+      <Image src={src} alt={alt} className="object-cover" sizes="(max-width: 640px) 100vw, 50vw, 33vw" fill />
       <p className={styles.meal__time}>{time}</p>
     </div>
   );
