@@ -93,6 +93,30 @@ yarn dev
 
 ブラウザで [http://localhost:3000](http://localhost:3000) を開いて結果を確認します。
 
+### ディレクトリ構造
+
+```
+├── app
+│   ├── components
+│   ├── column
+│   ├── my-record
+│   ├── layout.tsx
+│   └── page.tsx
+├── mockedApi
+└── public
+    └── img
+```
+
+- app: ソースディレクトリ
+- app/components: 再利用可能な UI コンポーネントのディレクトリ
+- app/column: カラム一覧ページのディレクトリ
+- app/my-record: 自分の記録ページのディレクトリ
+- app/layout.tsx: デフォルトレイアウトファイル
+- app/page.tsx: ホームページの HTML ファイル
+- mockedApi: モック API のディレクトリ。ダミーデータを置くディレクトリ
+- public: 公開ファイルを置くディレクトリ
+- public/img: アプリの画像を置くディレクトリ
+
 ### マニュアル
 
 #### ページ遷移
