@@ -4,14 +4,24 @@ import ColumnItem from "../components/ColumnItem";
 import BtnGradient from "../components/BtnGradient";
 
 async function getColumns() {
-  const res = await fetch("http://localhost:6767/api/columns", {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("failed to fetch columns");
+  try {
+    const res = await fetch("http://localhost:6767/api/columns", {
+      cache: "no-store",
+    });
+  
+    return res.json();
+  } catch(e) {
+    return [
+      { "time": ["2021.05.21", "23:15"], "src": "/img/columns/column-1.jpg", "alt": "grilled fish" },
+      { "time": ["2021.05.20", "13:20"], "src": "/img/columns/column-2.jpg", "alt": "sleeping woman" },
+      { "time": ["2021.05.19", "20:35"], "src": "/img/columns/column-3.jpg", "alt": "drinking juice man" },
+      { "time": ["2021.05.18", "09:55"], "src": "/img/columns/column-4.jpg", "alt": "vegetables" },
+      { "time": ["2021.05.17", "11:22"], "src": "/img/columns/column-5.jpg", "alt": "cup of water" },
+      { "time": ["2021.05.16", "16:48"], "src": "/img/columns/column-6.jpg", "alt": "gym woman" },
+      { "time": ["2021.05.15", "23:33"], "src": "/img/columns/column-7.jpg", "alt": "drugs" },
+      { "time": ["2021.05.14", "18:25"], "src": "/img/columns/column-8.jpg", "alt": "beautiful woman" }
+    ];
   }
-
-  return res.json();
 }
 
 export default async function Column() {

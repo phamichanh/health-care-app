@@ -7,14 +7,36 @@ import Exercise from "../components/Exercise";
 import BtnPeriodTime from "../components/BtnPeriodTime";
 
 async function getDiaries() {
-  const res = await fetch("http://localhost:6767/api/diaries", {
-    cache: "no-store",
-  });
-  if (!res.ok) {
-    throw new Error("failed to fetch diaries");
+  try {
+    const res = await fetch("http://localhost:6767/api/diaries", {
+      cache: "no-store",
+    });
+  
+    return res.json();
+  } catch(e) {
+    return [
+      {
+        "date": "2021.05.21",
+        "time": "23:25",
+        "text": "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"
+      },
+      {
+        "date": "2021.05.20",
+        "time": "22:25",
+        "text": "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"
+      },
+      {
+        "date": "2021.05.19",
+        "time": "20:15",
+        "text": "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"
+      },
+      {
+        "date": "2021.05.18",
+        "time": "23:20",
+        "text": "私の日記の記録が一部表示されます。\nテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…"
+      }
+    ];
   }
-
-  return res.json();
 }
 
 async function getBodyData() {
